@@ -1,0 +1,16 @@
+// namespace is optional
+
+class Quiz
+{
+  static void main()
+  {
+    System.Console.Write("Please enter the length in cm: ");
+    
+    string input = System.Console.ReadLine();
+    double length = System.Convert.ToDouble(input);
+    //double length = System.Convert.ToDouble(System.Console.Readline());
+    
+    double lengthInInch = length / 2.54
+    System.Console.WriteLine("{0:##.000}", lengthInInch);
+  }
+}
