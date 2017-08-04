@@ -1,6 +1,4 @@
-# Lesson1
-
-#class is like a bucket
+//class is like a bucket
 class MyFirstProgram
 {
   static void Main()
