@@ -1,0 +1,60 @@
+using System;
+namespace Aug42017
+{
+	class ConditionalsNestedIf
+	{
+		static void Main()
+		{
+			//getting the input
+			Console.Write("Enter the number grade: ");
+			double noGrade = double.Parse(Console.ReadLine());
+
+			//check the input
+			//if between 85-100 A+
+			if (noGrade > 85 && noGrade <= 100)
+			{
+				string grade = "A+";
+			}
+
+			//80-85 A
+			//75-80 A-
+			//70-75 B+
+			//65-70 B
+			//others, less than B
+
+			//print out the grade
+			Console.WriteLine("Your grade is {0}, grade); //This is wrong. grade is only valid throughout the block {} it was defined in.
+		}
+	}
+}
+
+// can copy paste if (noGrade > ## && noGrade <= ##) {} onto every mark range
+// conditions are mutually exclusive, so copy paste if (noGrade > ## && noGrade <= ##) {} will check every condition
+// this is why we use if... else... if... else  
+
+
+// Switch
+
+int Day = ISSConsole.ReadInt();
+switch (Day)
+{
+    case -2: //can combine cases to make a many-to-one relationship
+    case -1: //can combine cases to make a many-to-one relationship
+    case 1:
+          Console.WriteLine("Sun");
+          break;
+    case 2:
+          Console.WriteLine("Mon");  break;
+    case 3:
+         Console.WriteLine("Tue");  break;
+    case 4:
+         Console.WriteLine("Wed"); break;
+    case 5:
+         Console.WriteLine("Thu"); break;
+    case 6:
+         Console.WriteLine("Fri"); break;
+    case 7:
+         Console.WriteLine("Sat"); break;
+    default:
+}
+Console.WriteLine("Out of Range"); break;
