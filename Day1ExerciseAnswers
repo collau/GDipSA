@@ -1,0 +1,96 @@
+#Question 1
+
+using System;
+
+namespace ConsoleApplication1
+{
+  class Email
+  {
+    static void Main()
+    {
+      Console.WriteLine("John Smith");
+      Console.WriteLine("e0011223@u.nus.edu");
+    }
+  }
+}
+
+
+#Question 2
+
+using System;
+
+namespace ConsoleApplication1
+{
+  class Greeting
+  {
+    static void Main()
+    {
+      Console.Write("Please type your name: ");
+      string naMe = Console.Readline();
+      Console.WriteLine("Good Morning {0}", naMe);
+    }
+  }
+}
+
+
+#Question 3
+
+using System;
+
+namespace Console Application1
+{
+  class Square
+  {
+    static void Main()
+    {
+      Console.Write("Please type an integer: ");
+      string input = Console.Readline();
+      int i = Convert.ToInt32(input);
+      int result = i * i;
+      Console.WriteLine("{0}² = {1}", i, result);
+    }
+  }
+}
+
+
+#Question 4
+
+using System;
+
+namespace Console Application1
+{
+  class DoublePrecision
+  {
+    static void Main()
+    {
+      Console.Write("Please type a number, including decimals: ");
+      string input2 = Console.Readline();
+      double j = Convert.ToDouble(input2);
+      double result2 = j * j;
+      Console.WriteLine("{0}² = {1}, j, result2);
+    }
+  }
+}
+
+
+#Question 5
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class DoubleRound
+    {
+        static void Main()
+        {
+            Console.Write("Please input any decimal: ");
+            string input = Console.ReadLine();
+            double l = Convert.ToDouble(input);
+            Console.WriteLine("{0:##.00}",l);
+        }
+    }
+}
