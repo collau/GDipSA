@@ -1,0 +1,84 @@
+// For loop, use this as a basic guideline
+// for (int i = 0; i < 10; i++) --> (initial; condition to continue to loop; increment)
+
+namespace Aug72017
+{
+  class ForLoop
+  {
+    static void Main()
+    {
+      for (int i = 0; i < 10; i++) // can do for (int i = 0; i <= 9; i++) depends on readability
+      {
+      Console.WriteLine(i);
+      }
+    }
+  }
+}
+
+
+//For loop, increment by 2
+
+class ForLoop2
+  {
+    static void Main()
+    {
+      for (int i = 0; i < 10; i + i)
+      {
+      Console.WriteLine(i);
+      }
+      
+      Console.WriteLine("--------");
+      
+      for (int i = 10; i >= 0; i = i - 2) //next loop
+      {
+      Console.WriteLine(i);
+      }
+      
+    }
+  }
+  
+  
+  
+  //while loop
+  
+  class WhileLoop
+  {
+    static void Main()
+    {
+      int i = 0;
+      while (i<10) // i<=9
+      {
+        Console.WriteLine(i);
+        i++;
+      }
+    }
+    
+    // same as following for loop:
+    for (int i = 0; i < 10; i++)
+    {
+      Console.WriteLine(i);
+    }
+  }
+  
+  
+  //TryParse
+  
+  class TryParse
+  {
+    static void Main()
+    {
+      Console.Write("Please enter an integer: ");
+      string input = Console.ReadLine();
+      
+      int value;
+      bool isParsable = Int32.TryParse(input, out value);
+      
+      if (isParsable)
+      {
+        Console.WriteLine("The value that you've entered is {0}", value);
+      } else
+      {
+        Console.WriteLine("You didn't eneter an integer");
+      }
+    }
+  }
