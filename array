@@ -1,0 +1,6 @@
+int[] A; // we do not have anything yet
+A[] = new int[5]; // creating a storage of integers that have 5 elements
+
+// declaration of array variable (declaration)
+// then assign array to the variable (instatation: create an array, then assign the array to the variable)
+// an array is of a fixed size. if needs to increase size of array, will need to move to another array
