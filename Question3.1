@@ -1,0 +1,92 @@
+using System;
+namespace OOPCS_Workshop3
+{
+	public class BankAccount2
+	{
+		//ATTRIBUTES
+		private string accountNumber;
+		private string accountHolder;
+		private double balance;
+
+		//CONSTRUCTOR
+		public BankAccount2(string accountNumber, string accountHolder, double balance)
+		{
+			this.accountNumber = accountNumber;
+			this.accountHolder = accountHolder;
+			this.balance = balance;
+		}
+
+		public BankAccount2() : this("000-000-000", "NoName", 0)
+		{
+			//default constructor
+		}
+
+		//PROPERTIES
+		public string AccountNumber
+		{
+			get
+			{
+				return accountNumber;
+			}
+		}
+
+		public string AccountHolder
+		{
+			get
+			{
+				return accountHolder;
+			}
+			set
+			{
+				accountHolder = value;
+			}
+		}
+
+		public double Balance
+		{
+			get
+			{
+				return balance;
+			}
+		}
+
+		//METHODS
+		public double Deposit(double amount)
+		{
+			balance = balance + amount;
+			return balance;
+		}
+
+		public bool Withdraw(double amount)
+		{
+			if (amount > balance)
+			{
+				Console.WriteLine("There are insufficient funds.");
+				return false;
+			}
+			else
+			{
+				balance = balance - amount;
+				return true;
+			}
+		}
+
+		public string Show()
+		{
+			string m = String.Format("AccountNumber: {0}\nHolderName: {1}\nBalance: {2:C}", AccountNumber, AccountHolder, Balance);
+			return m;
+		}
+
+		public void TransferTo(double amount, BankAccount2 another)
+		{
+			if (Withdraw(amount))
+			{
+				another.Deposit(amount);
+			}
+			else
+			{
+				Console.WriteLine("Transfer unsuccessful");
+			}
+		}
+	}
+}
