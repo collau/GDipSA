@@ -1,0 +1,35 @@
+//1
+select * from Shippers
+select * from Shippers order by CompanyName asc
+//2
+select FirstName,LastName,Title,BirthDate,City from Employees
+select Distinct Title from Employees
+//3
+select * from Orders where OrderDate = '1997-05-19'
+//4
+select * from Customers where City IN ('London','Madrid')
+//5
+select CustomerID,ContactName from Customers where Country = 'UK' order by ContactName asc
+//6
+select OrderID,OrderDate from Orders where CustomerID = 'Hanar'
+//7
+select (TitleofCourtesy +' '+ FirstName +' '+ LastName) as FullyQualifiedName from Employees order by LastName asc
+//8
+select OrderID,OrderDate from Orders where CustomerID = 'MAISD'
+select OrderID,OrderDate from Orders where CustomerID IN (select CustomerID from Customers where CompanyName = 'Maison Dewey')
+//9
+select * from Products where ProductName Like '%lager%'
+//10
+select CustomerID,ContactName from Customers where CustomerID not in (select CustomerID from Orders)
+//11
+select avg(UnitPrice) as AvgPrice from Products
+//12
+select Distinct City from Customers
+//13
+select count(Distinct CustomerID) from Orders
+//14
+select CompanyName,Phone from Customers where Fax IS NULL
+//15
+select sum(UnitPrice * Quantity) as TotalSales from [Order Details]
+//16
+select OrderID from Orders where CustomerID in (select CustomerID from Customers where CompanyName IN ('Alan Out','Blone Coy'))
