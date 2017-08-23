@@ -1,0 +1,70 @@
+/*17*/
+select CustomerID,count(OrderID) from Orders group by CustomerID
+/*18*/
+select c.CompanyName, o.OrderID from Customers c, Orders o where c.CustomerID = o.CustomerID AND c.CustomerID = 'BONAP'
+/*19a*/
+select Customers.CustomerID,CompanyName,count(Orders.OrderID)
+from Customers, Orders
+where Customers.CustomerID = Orders.CustomerID
+group by Customers.CustomerID, CompanyName
+having count(Orders.OrderID)>10
+order by count(orders.orderID) desc
+/*19b*/
+select Customers.CustomerID,CompanyName,count(Orders.OrderID)
+from Customers, Orders
+where Customers.CustomerID = Orders.CustomerID
+group by Customers.CustomerID,CompanyName
+having Customers.CustomerID = 'BONAP'
+/*19c*/
+select c.CustomerID,CompanyName,count(o.OrderID)
+from Customers c, Orders o
+where c.CustomerID = o.CustomerID
+group by c.CustomerID, CompanyName
+having count(o.OrderID)>(select count(*) from Orders where CustomerID = 'BONAP')
+/*20a*/
+select * from Products where CategoryID in ('1','2') order by ProductID,ProductName
+/*20b*/
+/*sub-query*/
+select * from Products where CategoryID IN (select CategoryID from Categories where CategoryName IN ('Beverages','Condiments'))
+/*inner join*/
+select products.* from Products, Categories where Products.CategoryID = Categories.CategoryID AND Categories.CategoryName IN ('Beverages','Condiments')
+/*21a*/
+select count(*) from Employees
+/*21b*/
+select count(*) from Employees where Country = 'USA'
+/*22*/
+select * from Orders
+where ShipVia IN (select ShipperID from Shippers where CompanyName = 'United Package')
+AND EmployeeID IN (select EmployeeID from Employees where Title = 'Sales Representative')
+/*23*/
+--might need to do outer join
+select (staff.FirstName +' '+ staff.LastName) as [Staff Name],(supervisor.FirstName +' '+ supervisor.LastName) as [Supervisor Name]
+from Employees staff left outer join Employees supervisor on staff.reportsto = supervisor.employeeID
+/*24*/
+--same product or different product
+select TOP 5 ([Order Details].Discount * [Order Details].UnitPrice) as [Discounted Price],[Order Details].*,Products.ProductName as [Discounted Product]
+from [Order Details], Products
+where [Order Details].ProductID = Products.ProductID
+order by [Discounted Price] desc
+/*25*/
+select CompanyName,ContactName,City from Customers where City not in (select City from Suppliers)
+/*26*/
+select DISTINCT City
+from Customers
+where City IN (select City from Suppliers)
+/*27a*/
+select ContactName,Address,Phone from Customers UNION select ContactName,Address,Phone from Suppliers
+/*27b*/
+select ContactName,Address,Phone from Customers UNION select ContactName,Address,Phone from Suppliers UNION Select CompanyName,'',Phone from Shippers
+/*28*/
+select (boss.FirstName+' '+boss.LastName)
+from Employees staff, Employees boss
+where boss.EmployeeID = staff.ReportsTo
+AND staff.EmployeeID IN (Select EmployeeID from Orders where OrderID = '10248')
+/*29*/
+--still wrong
+select * from Products
+select Avg(UnitPrice) from Products
+select ProductID,ProductName,UnitPrice
+from Products
+where (UnitPrice)>(select Avg(UnitPrice)from products) 
