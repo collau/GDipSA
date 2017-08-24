@@ -62,9 +62,43 @@ from Employees staff, Employees boss
 where boss.EmployeeID = staff.ReportsTo
 AND staff.EmployeeID IN (Select EmployeeID from Orders where OrderID = '10248')
 /*29*/
---still wrong
-select * from Products
-select Avg(UnitPrice) from Products
 select ProductID,ProductName,UnitPrice
 from Products
-where (UnitPrice)>(select Avg(UnitPrice)from products) 
+where (UnitPrice)>(select Avg(UnitPrice)from products)
+/*30*/
+select [Order Details].OrderID, sum(UnitPrice*Quantity)
+from Orders,[Order Details]
+where Orders.OrderID = [Order Details].OrderID
+group by [Order Details].OrderID
+having sum(UnitPrice*Quantity)>10000
+/*31*/
+select [Order Details].OrderID,CustomerID, sum(UnitPrice*Quantity)
+from Orders,[Order Details]
+where Orders.OrderID = [Order Details].OrderID
+group by [Order Details].OrderID, CustomerID
+having sum(UnitPrice*Quantity)>10000
+/*32*/
+select [Order Details].OrderID,Orders.CustomerID,CompanyName, sum(UnitPrice*Quantity) as [Total Sum of Order]
+from Orders,[Order Details],Customers
+where Orders.OrderID = [Order Details].OrderID AND Orders.CustomerID = Customers.CustomerID
+group by [Order Details].OrderID, Orders.CustomerID, Customers.CompanyName
+having sum(UnitPrice*Quantity)>10000
+/*33*/
+select CustomerID, sum(UnitPrice*Quantity) as Amount
+from Orders,[Order Details]
+where Orders.OrderID = [Order Details].OrderID
+group by CustomerID
+/*34*/
+select sum(UnitPrice*Quantity)/count(distinct CustomerID) as Average
+from Orders,[Order Details]
+where Orders.OrderID = [Order Details].OrderID
+/*35*/
+select Orders.CustomerID, CompanyName, sum(UnitPrice*Quantity) as Amount
+from Orders,[Order Details],Customers where Orders.OrderID = [Order Details].OrderID AND Orders.CustomerID = Customers.CustomerID
+group by Orders.CustomerID, Customers.CompanyName
+having sum(UnitPrice*Quantity) > (select sum(UnitPrice*Quantity)/count(distinct CustomerID) as Amount from Orders,[Order Details] where Orders.OrderID = [Order Details].OrderID)
+/*36*/
+select CustomerID, sum(UnitPrice*Quantity) as Amount
+from Orders,[Order Details]
+where Orders.OrderID = [Order Details].OrderID AND year(orderdate)=1997
+group by CustomerID order by CustomerID
