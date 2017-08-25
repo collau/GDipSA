@@ -1,0 +1,28 @@
+/*Userview1*/
+create view Customer1998 as
+select Orders.CustomerID,CompanyName,[Order Details].ProductID,ProductName
+from Orders,Customers,[Order Details],Products
+where Orders.CustomerID = Customers.CustomerID AND Orders.OrderID = [Order Details].OrderID
+AND [Order Details].ProductID = Products.ProductID AND year(orders.orderdate)=1998
+group by Orders.CustomerID,CompanyName,[Order Details].ProductID,ProductName
+
+/*Userview2*/
+select Customer1998.CompanyName as [Customer Name],Customer1998.ProductName,Suppliers.CompanyName as [Supplier Name]
+from Customer1998, Products, Suppliers
+where Customer1998.ProductID = Products.ProductID AND Products.SupplierID = Suppliers.SupplierID
+
+/*Userview3*/
+select CompanyName, count(ProductID) as [Number of Unique Products Ordered]
+from Customer1998
+group by CompanyName
+
+/*Userview4a*/
+create view TotalBusiness ([Customer ID],[Total Price of Orders]) as
+select Customers.CustomerID, sum(unitprice*quantity)
+from [Order Details], orders, Customers
+where [Order Details].OrderID = Orders.OrderID AND Orders. CustomerID = Customers.CustomerID
+group by Customers.CustomerID
+select * from TotalBusiness
+
+/*Userview4b*/
+select avg([Total Price of Orders]) from TotalBusiness
