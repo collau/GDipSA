@@ -1,0 +1,19 @@
+/*StoredProcedure1a*/
+Create procedure ProcedureA
+as
+select * from customers where MemberCategory = 'A'
+
+/*StoredProcedure1b*/
+exec ProcedureA
+
+/*StoredProcedure2a*/
+Create procedure ProcedureX (@var1 CHAR(1))
+as
+begin
+select * from customers where MemberCategory = @var1;
+end
+
+/*StoredProcedure2b*/
+exec ProcedureX 'B'
+-- 12 records with MemberCategory B will be retrieved
+-- no records will be retrieved as MemberCategory is only till D
