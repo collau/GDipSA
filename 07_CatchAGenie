@@ -1,0 +1,130 @@
+//Form1.Designer.cs
+
+namespace CatchAGenie
+{
+    partial class Form1
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.lamp = new System.Windows.Forms.PictureBox();
+            this.genie = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.lamp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genie)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // lamp
+            // 
+            this.lamp.Image = ((System.Drawing.Image)(resources.GetObject("lamp.Image")));
+            this.lamp.Location = new System.Drawing.Point(500, 285);
+            this.lamp.Name = "lamp";
+            this.lamp.Size = new System.Drawing.Size(70, 59);
+            this.lamp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.lamp.TabIndex = 0;
+            this.lamp.TabStop = false;
+            this.lamp.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.lamp.DoubleClick += new System.EventHandler(this.lamp_DoubleClick);
+            // 
+            // genie
+            // 
+            this.genie.Image = ((System.Drawing.Image)(resources.GetObject("genie.Image")));
+            this.genie.Location = new System.Drawing.Point(576, 145);
+            this.genie.Name = "genie";
+            this.genie.Size = new System.Drawing.Size(153, 174);
+            this.genie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.genie.TabIndex = 1;
+            this.genie.TabStop = false;
+            this.genie.Visible = false;
+            this.genie.MouseMove += new System.Windows.Forms.MouseEventHandler(this.genie_MouseMove);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Highlight;
+            this.ClientSize = new System.Drawing.Size(1172, 636);
+            this.Controls.Add(this.genie);
+            this.Controls.Add(this.lamp);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.lamp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genie)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.PictureBox lamp;
+        private System.Windows.Forms.PictureBox genie;
+    }
+}
+
+
+
+
+//Form1.cs
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace CatchAGenie
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            genie.Visible = true;
+        }
+
+        private void genie_MouseMove(object sender, MouseEventArgs e)
+        {
+            genie.Visible = false;
+        }
+
+        private void lamp_DoubleClick(object sender, EventArgs e)
+        {
+            genie.Visible = true;
+            genie.Height = Height * 2;
+            genie.Width = Width * 2;
+            
+        }
+    }
+}
