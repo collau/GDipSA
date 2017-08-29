@@ -1,0 +1,227 @@
+//Form1.Designer.cs
+
+namespace IceCreamParlour2_5
+{
+    partial class Form1
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.gboFlavour = new System.Windows.Forms.GroupBox();
+            this.fStraw = new System.Windows.Forms.RadioButton();
+            this.fChoc = new System.Windows.Forms.RadioButton();
+            this.btnOrder = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gboSize = new System.Windows.Forms.GroupBox();
+            this.cboSize = new System.Windows.Forms.ComboBox();
+            this.lboTopping = new System.Windows.Forms.ListBox();
+            this.gboFlavour.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.gboSize.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // gboFlavour
+            // 
+            this.gboFlavour.Controls.Add(this.fStraw);
+            this.gboFlavour.Controls.Add(this.fChoc);
+            this.gboFlavour.Location = new System.Drawing.Point(50, 101);
+            this.gboFlavour.Name = "gboFlavour";
+            this.gboFlavour.Size = new System.Drawing.Size(200, 74);
+            this.gboFlavour.TabIndex = 1;
+            this.gboFlavour.TabStop = false;
+            this.gboFlavour.Text = "Flavour";
+            // 
+            // fStraw
+            // 
+            this.fStraw.AutoSize = true;
+            this.fStraw.Location = new System.Drawing.Point(27, 44);
+            this.fStraw.Name = "fStraw";
+            this.fStraw.Size = new System.Drawing.Size(75, 17);
+            this.fStraw.TabIndex = 1;
+            this.fStraw.Text = "Strawberry";
+            this.fStraw.UseVisualStyleBackColor = true;
+            // 
+            // fChoc
+            // 
+            this.fChoc.AutoSize = true;
+            this.fChoc.Checked = true;
+            this.fChoc.Location = new System.Drawing.Point(27, 20);
+            this.fChoc.Name = "fChoc";
+            this.fChoc.Size = new System.Drawing.Size(73, 17);
+            this.fChoc.TabIndex = 0;
+            this.fChoc.TabStop = true;
+            this.fChoc.Text = "Chocolate";
+            this.fChoc.UseVisualStyleBackColor = true;
+            // 
+            // btnOrder
+            // 
+            this.btnOrder.Location = new System.Drawing.Point(245, 308);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(75, 23);
+            this.btnOrder.TabIndex = 2;
+            this.btnOrder.Text = "Get Order!";
+            this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lboTopping);
+            this.groupBox1.Location = new System.Drawing.Point(50, 181);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 100);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Toppings";
+            // 
+            // gboSize
+            // 
+            this.gboSize.Controls.Add(this.cboSize);
+            this.gboSize.Location = new System.Drawing.Point(50, 36);
+            this.gboSize.Name = "gboSize";
+            this.gboSize.Size = new System.Drawing.Size(200, 59);
+            this.gboSize.TabIndex = 0;
+            this.gboSize.TabStop = false;
+            this.gboSize.Text = "Size";
+            // 
+            // cboSize
+            // 
+            this.cboSize.FormattingEnabled = true;
+            this.cboSize.Items.AddRange(new object[] {
+            "Small",
+            "Medium",
+            "Large"});
+            this.cboSize.Location = new System.Drawing.Point(27, 20);
+            this.cboSize.Name = "cboSize";
+            this.cboSize.Size = new System.Drawing.Size(121, 21);
+            this.cboSize.TabIndex = 0;
+            // 
+            // lboTopping
+            // 
+            this.lboTopping.FormattingEnabled = true;
+            this.lboTopping.Items.AddRange(new object[] {
+            "Nuts",
+            "Raisins",
+            "ChocolateChips"});
+            this.lboTopping.Location = new System.Drawing.Point(27, 20);
+            this.lboTopping.Name = "lboTopping";
+            this.lboTopping.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.lboTopping.Size = new System.Drawing.Size(120, 56);
+            this.lboTopping.TabIndex = 0;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(610, 671);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btnOrder);
+            this.Controls.Add(this.gboFlavour);
+            this.Controls.Add(this.gboSize);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            this.gboFlavour.ResumeLayout(false);
+            this.gboFlavour.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.gboSize.ResumeLayout(false);
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+        private System.Windows.Forms.GroupBox gboFlavour;
+        private System.Windows.Forms.RadioButton fStraw;
+        private System.Windows.Forms.RadioButton fChoc;
+        private System.Windows.Forms.Button btnOrder;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gboSize;
+        private System.Windows.Forms.ComboBox cboSize;
+        private System.Windows.Forms.ListBox lboTopping;
+    }
+}
+
+
+
+
+
+// Set EventHandler (Form1.cs)
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace IceCreamParlour2_5
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            string s;
+            string f;
+            string t;
+
+            if (cboSize.Text == "Small")
+                s = "small";
+            else if (cboSize.Text == "Medium")
+                s = "medium";
+            else
+                s = "large";
+
+            if (fChoc.Checked == true)
+                f = "chocolate";
+            else
+                f = "strawberry";
+
+            if (lboTopping.SelectedItems.Count==0)
+            {
+                t = " with no toppings";
+            }
+            else
+            {
+                t = " with toppings:";
+                /*for(int i = 0; i < lboTopping.SelectedItems.Count;i++)
+                {
+                    t += " " + lboTopping.SelectedItems[i].ToString();
+                }*/
+                foreach(Object sl in lboTopping.SelectedItems)
+                {
+                    t += " " + sl.ToString();
+                }
+            }
+            MessageBox.Show("A " + s + " " + f + " ice cream" + t + " has been ordered!");
+        }
+    }
+}
