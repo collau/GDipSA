@@ -1,0 +1,276 @@
+//Form1.Designer.cs
+
+namespace IceCreamParlour2_5
+{
+    partial class Form1
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.gboSize = new System.Windows.Forms.GroupBox();
+            this.gboFlavour = new System.Windows.Forms.GroupBox();
+            this.optSmall = new System.Windows.Forms.RadioButton();
+            this.optMedium = new System.Windows.Forms.RadioButton();
+            this.optLarge = new System.Windows.Forms.RadioButton();
+            this.fChoc = new System.Windows.Forms.RadioButton();
+            this.fStraw = new System.Windows.Forms.RadioButton();
+            this.btnOrder = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkNuts = new System.Windows.Forms.CheckBox();
+            this.chkRaisins = new System.Windows.Forms.CheckBox();
+            this.chkChocolateChips = new System.Windows.Forms.CheckBox();
+            this.gboSize.SuspendLayout();
+            this.gboFlavour.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // gboSize
+            // 
+            this.gboSize.Controls.Add(this.optLarge);
+            this.gboSize.Controls.Add(this.optMedium);
+            this.gboSize.Controls.Add(this.optSmall);
+            this.gboSize.Location = new System.Drawing.Point(50, 36);
+            this.gboSize.Name = "gboSize";
+            this.gboSize.Size = new System.Drawing.Size(200, 100);
+            this.gboSize.TabIndex = 0;
+            this.gboSize.TabStop = false;
+            this.gboSize.Text = "Size";
+            // 
+            // gboFlavour
+            // 
+            this.gboFlavour.Controls.Add(this.fStraw);
+            this.gboFlavour.Controls.Add(this.fChoc);
+            this.gboFlavour.Location = new System.Drawing.Point(50, 164);
+            this.gboFlavour.Name = "gboFlavour";
+            this.gboFlavour.Size = new System.Drawing.Size(200, 74);
+            this.gboFlavour.TabIndex = 1;
+            this.gboFlavour.TabStop = false;
+            this.gboFlavour.Text = "Flavour";
+            // 
+            // optSmall
+            // 
+            this.optSmall.AutoSize = true;
+            this.optSmall.Checked = true;
+            this.optSmall.Location = new System.Drawing.Point(27, 20);
+            this.optSmall.Name = "optSmall";
+            this.optSmall.Size = new System.Drawing.Size(50, 17);
+            this.optSmall.TabIndex = 0;
+            this.optSmall.TabStop = true;
+            this.optSmall.Text = "Small";
+            this.optSmall.UseVisualStyleBackColor = true;
+            // 
+            // optMedium
+            // 
+            this.optMedium.AutoSize = true;
+            this.optMedium.Location = new System.Drawing.Point(27, 44);
+            this.optMedium.Name = "optMedium";
+            this.optMedium.Size = new System.Drawing.Size(62, 17);
+            this.optMedium.TabIndex = 1;
+            this.optMedium.Text = "Medium";
+            this.optMedium.UseVisualStyleBackColor = true;
+            // 
+            // optLarge
+            // 
+            this.optLarge.AutoSize = true;
+            this.optLarge.Location = new System.Drawing.Point(27, 68);
+            this.optLarge.Name = "optLarge";
+            this.optLarge.Size = new System.Drawing.Size(52, 17);
+            this.optLarge.TabIndex = 2;
+            this.optLarge.Text = "Large";
+            this.optLarge.UseVisualStyleBackColor = true;
+            // 
+            // fChoc
+            // 
+            this.fChoc.AutoSize = true;
+            this.fChoc.Checked = true;
+            this.fChoc.Location = new System.Drawing.Point(27, 20);
+            this.fChoc.Name = "fChoc";
+            this.fChoc.Size = new System.Drawing.Size(73, 17);
+            this.fChoc.TabIndex = 0;
+            this.fChoc.TabStop = true;
+            this.fChoc.Text = "Chocolate";
+            this.fChoc.UseVisualStyleBackColor = true;
+            // 
+            // fStraw
+            // 
+            this.fStraw.AutoSize = true;
+            this.fStraw.Location = new System.Drawing.Point(27, 44);
+            this.fStraw.Name = "fStraw";
+            this.fStraw.Size = new System.Drawing.Size(75, 17);
+            this.fStraw.TabIndex = 1;
+            this.fStraw.Text = "Strawberry";
+            this.fStraw.UseVisualStyleBackColor = true;
+            // 
+            // btnOrder
+            // 
+            this.btnOrder.Location = new System.Drawing.Point(247, 417);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(75, 23);
+            this.btnOrder.TabIndex = 2;
+            this.btnOrder.Text = "Get Order!";
+            this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.chkChocolateChips);
+            this.groupBox1.Controls.Add(this.chkRaisins);
+            this.groupBox1.Controls.Add(this.chkNuts);
+            this.groupBox1.Location = new System.Drawing.Point(50, 267);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 100);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // chkNuts
+            // 
+            this.chkNuts.AutoSize = true;
+            this.chkNuts.Location = new System.Drawing.Point(27, 20);
+            this.chkNuts.Name = "chkNuts";
+            this.chkNuts.Size = new System.Drawing.Size(48, 17);
+            this.chkNuts.TabIndex = 0;
+            this.chkNuts.Text = "Nuts";
+            this.chkNuts.UseVisualStyleBackColor = true;
+            // 
+            // chkRaisins
+            // 
+            this.chkRaisins.AutoSize = true;
+            this.chkRaisins.Location = new System.Drawing.Point(27, 44);
+            this.chkRaisins.Name = "chkRaisins";
+            this.chkRaisins.Size = new System.Drawing.Size(60, 17);
+            this.chkRaisins.TabIndex = 1;
+            this.chkRaisins.Text = "Raisins";
+            this.chkRaisins.UseVisualStyleBackColor = true;
+            // 
+            // chkChocolateChips
+            // 
+            this.chkChocolateChips.AutoSize = true;
+            this.chkChocolateChips.Location = new System.Drawing.Point(27, 68);
+            this.chkChocolateChips.Name = "chkChocolateChips";
+            this.chkChocolateChips.Size = new System.Drawing.Size(103, 17);
+            this.chkChocolateChips.TabIndex = 2;
+            this.chkChocolateChips.Text = "Chocolate Chips";
+            this.chkChocolateChips.UseVisualStyleBackColor = true;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(610, 671);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btnOrder);
+            this.Controls.Add(this.gboFlavour);
+            this.Controls.Add(this.gboSize);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            this.gboSize.ResumeLayout(false);
+            this.gboSize.PerformLayout();
+            this.gboFlavour.ResumeLayout(false);
+            this.gboFlavour.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.GroupBox gboSize;
+        private System.Windows.Forms.RadioButton optLarge;
+        private System.Windows.Forms.RadioButton optMedium;
+        private System.Windows.Forms.RadioButton optSmall;
+        private System.Windows.Forms.GroupBox gboFlavour;
+        private System.Windows.Forms.RadioButton fStraw;
+        private System.Windows.Forms.RadioButton fChoc;
+        private System.Windows.Forms.Button btnOrder;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckBox chkChocolateChips;
+        private System.Windows.Forms.CheckBox chkRaisins;
+        private System.Windows.Forms.CheckBox chkNuts;
+    }
+}
+
+
+
+
+// Set EventHandler (form1.cs)
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace IceCreamParlour2_5
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            string s;
+            string f;
+            string t;
+
+            if (optSmall.Checked == true)
+                s = "small";
+            else if (optMedium.Checked == true)
+                s = "medium";
+            else
+                s = "large";
+
+            if (fChoc.Checked == true)
+                f = "chocolate";
+            else
+                f = "strawberry";
+
+            if (!chkNuts.Checked && !chkRaisins.Checked && !chkChocolateChips.Checked)
+            {
+                t = " with no toppings";
+            }
+            else
+            {
+                t = " with toppings:";
+                if (chkNuts.Checked)
+                    t += " Nuts";
+                if (chkRaisins.Checked)
+                    t += " Raisins";
+                if (chkChocolateChips.Checked)
+                    t += " Chocolate Chips";
+            }
+            MessageBox.Show("A " + s + " " + f + " ice cream" + t + " has been ordered!");
+        }
+    }
+}
