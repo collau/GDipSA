@@ -1,0 +1,157 @@
+//Form1.Designer.cs
+
+namespace WindowsFormsApplication1
+{
+    partial class Form1
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.pboDog = new System.Windows.Forms.PictureBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.mniMakeBig = new System.Windows.Forms.ToolStripMenuItem();
+            this.mniMakeNormal = new System.Windows.Forms.ToolStripMenuItem();
+            this.mniMakeSmall = new System.Windows.Forms.ToolStripMenuItem();
+            ((System.ComponentModel.ISupportInitialize)(this.pboDog)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // pboDog
+            // 
+            this.pboDog.ContextMenuStrip = this.contextMenuStrip1;
+            this.pboDog.Image = ((System.Drawing.Image)(resources.GetObject("pboDog.Image")));
+            this.pboDog.Location = new System.Drawing.Point(95, 93);
+            this.pboDog.Name = "pboDog";
+            this.pboDog.Size = new System.Drawing.Size(128, 145);
+            this.pboDog.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboDog.TabIndex = 0;
+            this.pboDog.TabStop = false;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mniMakeBig,
+            this.mniMakeNormal,
+            this.mniMakeSmall});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(147, 70);
+            // 
+            // mniMakeBig
+            // 
+            this.mniMakeBig.Name = "mniMakeBig";
+            this.mniMakeBig.Size = new System.Drawing.Size(146, 22);
+            this.mniMakeBig.Text = "Make Big";
+            this.mniMakeBig.Click += new System.EventHandler(this.mniMakeBig_Click);
+            // 
+            // mniMakeNormal
+            // 
+            this.mniMakeNormal.Name = "mniMakeNormal";
+            this.mniMakeNormal.Size = new System.Drawing.Size(146, 22);
+            this.mniMakeNormal.Text = "Make Normal";
+            this.mniMakeNormal.Click += new System.EventHandler(this.mniMakeNormal_Click);
+            // 
+            // mniMakeSmall
+            // 
+            this.mniMakeSmall.Name = "mniMakeSmall";
+            this.mniMakeSmall.Size = new System.Drawing.Size(146, 22);
+            this.mniMakeSmall.Text = "Make Small";
+            this.mniMakeSmall.Click += new System.EventHandler(this.mniMakeSmall_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(344, 380);
+            this.Controls.Add(this.pboDog);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.pboDog)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.PictureBox pboDog;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem mniMakeBig;
+        private System.Windows.Forms.ToolStripMenuItem mniMakeNormal;
+        private System.Windows.Forms.ToolStripMenuItem mniMakeSmall;
+    }
+}
+
+
+
+
+
+// Set EventHandler (Form1.cs)
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApplication1
+{
+    public partial class Form1 : Form
+    {
+        private int normalHeight; // class variable
+        private int normalWidth; // class variable
+        public Form1()
+        {
+            InitializeComponent();
+            //Register PictureBox Height and Width using two variables during initialization
+            normalHeight = pboDog.Height;
+            normalWidth = pboDog.Width;
+        }
+
+        private void mniMakeBig_Click(object sender, EventArgs e)
+        {
+            pboDog.Height = normalHeight * 2;
+            pboDog.Width = normalWidth * 2;
+        }
+
+        private void mniMakeNormal_Click(object sender, EventArgs e)
+        {
+            pboDog.Height = normalHeight;
+            pboDog.Width = normalWidth;
+        }
+
+        private void mniMakeSmall_Click(object sender, EventArgs e)
+        {
+            pboDog.Height = normalHeight / 2;
+            pboDog.Width = normalWidth / 2;
+        }
+    }
+}
