@@ -1,0 +1,372 @@
+// Form1.Designer.cs
+
+namespace WindowsFormsApplication2
+{
+    partial class Form1
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        
+        private void InitializeComponent()
+
+        {
+
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.mniFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.mniCustomer = new System.Windows.Forms.ToolStripMenuItem();
+            this.mniSearch = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.mniNewCustomer = new System.Windows.Forms.ToolStripMenuItem();
+            this.mniVideo = new System.Windows.Forms.ToolStripMenuItem();
+            this.mniFreshInvoice = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.mniNewInvoice = new System.Windows.Forms.ToolStripMenuItem();
+            this.mniCheckInTape = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
+            this.mniExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.mniWindows = new System.Windows.Forms.ToolStripMenuItem();
+            this.mniHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.menuStrip2.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // menuStrip2
+            // 
+            this.menuStrip2.AllowMerge = false;
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mniFile,
+            this.mniWindows,
+            this.mniHelp});
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(284, 24);
+            this.menuStrip2.TabIndex = 0;
+            this.menuStrip2.Text = "menuStrip2";
+            // 
+            // mniFile
+            // 
+            this.mniFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mniCustomer,
+            this.mniVideo,
+            this.mniFreshInvoice,
+            this.toolStripMenuItem2,
+            this.mniNewInvoice,
+            this.mniCheckInTape,
+            this.toolStripMenuItem3,
+            this.mniExit});
+            this.mniFile.Name = "mniFile";
+            this.mniFile.Size = new System.Drawing.Size(37, 20);
+            this.mniFile.Text = "File";
+            this.mniFile.Click += new System.EventHandler(this.item_Click);
+
+            // 
+
+            // mniCustomer
+
+            // 
+
+            this.mniCustomer.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+
+            this.mniSearch,
+
+            this.toolStripMenuItem1,
+
+            this.mniNewCustomer});
+
+            this.mniCustomer.Name = "mniCustomer";
+
+            this.mniCustomer.Size = new System.Drawing.Size(149, 22);
+
+            this.mniCustomer.Text = "Customer";
+
+            this.mniCustomer.Click += new System.EventHandler(this.item_Click);
+
+            // 
+
+            // mniSearch
+
+            // 
+
+            this.mniSearch.Name = "mniSearch";
+
+            this.mniSearch.Size = new System.Drawing.Size(153, 22);
+
+            this.mniSearch.Text = "Search";
+
+            this.mniSearch.Click += new System.EventHandler(this.item_Click);
+
+            // 
+
+            // toolStripMenuItem1
+
+            // 
+
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(150, 6);
+            
+            // 
+
+            // mniNewCustomer
+
+            // 
+
+            this.mniNewCustomer.Name = "mniNewCustomer";
+
+            this.mniNewCustomer.Size = new System.Drawing.Size(153, 22);
+
+            this.mniNewCustomer.Text = "New Customer";
+
+            this.mniNewCustomer.Click += new System.EventHandler(this.item_Click);
+
+            // 
+
+            // mniVideo
+
+            // 
+
+            this.mniVideo.Name = "mniVideo";
+
+            this.mniVideo.Size = new System.Drawing.Size(149, 22);
+
+            this.mniVideo.Text = "Video";
+
+            this.mniVideo.Click += new System.EventHandler(this.item_Click);
+
+            // 
+
+            // mniFreshInvoice
+
+            // 
+
+            this.mniFreshInvoice.Name = "mniFreshInvoice";
+
+            this.mniFreshInvoice.Size = new System.Drawing.Size(149, 22);
+
+            this.mniFreshInvoice.Text = "Fresh Invoice";
+
+            this.mniFreshInvoice.Click += new System.EventHandler(this.item_Click);
+
+            // 
+
+            // toolStripMenuItem2
+
+            // 
+
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(146, 6);
+
+            // 
+
+            // mniNewInvoice
+
+            // 
+
+            this.mniNewInvoice.Name = "mniNewInvoice";
+
+            this.mniNewInvoice.Size = new System.Drawing.Size(149, 22);
+
+            this.mniNewInvoice.Text = "New Invoice";
+
+            this.mniNewInvoice.Click += new System.EventHandler(this.item_Click);
+
+            // 
+
+            // mniCheckInTape
+
+            // 
+
+            this.mniCheckInTape.Name = "mniCheckInTape";
+
+            this.mniCheckInTape.Size = new System.Drawing.Size(149, 22);
+
+            this.mniCheckInTape.Text = "Check In Tape";
+
+            this.mniCheckInTape.Click += new System.EventHandler(this.item_Click);
+
+            // 
+
+            // toolStripMenuItem3
+
+            // 
+
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(146, 6);
+
+            // 
+
+            // mniExit
+
+            // 
+
+            this.mniExit.Name = "mniExit";
+
+            this.mniExit.Size = new System.Drawing.Size(149, 22);
+
+            this.mniExit.Text = "Exit";
+
+            this.mniExit.Click += new System.EventHandler(this.item_Click);
+
+            // 
+
+            // mniWindows
+
+            // 
+
+            this.mniWindows.Name = "mniWindows";
+
+            this.mniWindows.Size = new System.Drawing.Size(68, 20);
+
+            this.mniWindows.Text = "Windows";
+
+            this.mniWindows.Click += new System.EventHandler(this.item_Click);
+
+            // 
+
+            // mniHelp
+
+            // 
+
+            this.mniHelp.Name = "mniHelp";
+
+            this.mniHelp.Size = new System.Drawing.Size(44, 20);
+
+            this.mniHelp.Text = "Help";
+
+            this.mniHelp.Click += new System.EventHandler(this.item_Click);
+
+            // 
+
+            // statusStrip1
+
+            // 
+
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+
+            this.toolStripStatusLabel1});
+
+            this.statusStrip1.Location = new System.Drawing.Point(0, 240);
+
+            this.statusStrip1.Name = "statusStrip1";
+
+            this.statusStrip1.Size = new System.Drawing.Size(284, 22);
+
+            this.statusStrip1.TabIndex = 1;
+
+            this.statusStrip1.Text = "statusStrip1";
+
+            // 
+
+            // toolStripStatusLabel1
+
+            // 
+
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(39, 17);
+
+            this.toolStripStatusLabel1.Text = "Ready";
+
+            // 
+
+            // Form1
+
+            // 
+
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+
+            this.ClientSize = new System.Drawing.Size(284, 262);
+
+            this.Controls.Add(this.statusStrip1);
+
+            this.Controls.Add(this.menuStrip2);
+
+            this.MainMenuStrip = this.menuStrip2;
+
+            this.Name = "Form1";
+
+            this.Text = "DafestyVideo";
+
+            this.menuStrip2.ResumeLayout(false);
+
+            this.menuStrip2.PerformLayout();
+
+            this.statusStrip1.ResumeLayout(false);
+
+            this.statusStrip1.PerformLayout();
+
+            this.ResumeLayout(false);
+
+            this.PerformLayout();
+
+
+        }
+
+
+        #endregion
+
+
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem mniFile;
+
+        private System.Windows.Forms.ToolStripMenuItem mniCustomer;
+
+        private System.Windows.Forms.ToolStripMenuItem mniSearch;
+
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+
+        private System.Windows.Forms.ToolStripMenuItem mniNewCustomer;
+
+        private System.Windows.Forms.ToolStripMenuItem mniVideo;
+
+        private System.Windows.Forms.ToolStripMenuItem mniFreshInvoice;
+
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
+
+        private System.Windows.Forms.ToolStripMenuItem mniNewInvoice;
+
+        private System.Windows.Forms.ToolStripMenuItem mniCheckInTape;
+
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
+
+        private System.Windows.Forms.ToolStripMenuItem mniExit;
+
+        private System.Windows.Forms.ToolStripMenuItem mniWindows;
+
+        private System.Windows.Forms.ToolStripMenuItem mniHelp;
+
+        private System.Windows.Forms.StatusStrip statusStrip1;
+
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+
+    }
+
+}
